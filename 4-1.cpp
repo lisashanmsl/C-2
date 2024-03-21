@@ -1,4 +1,4 @@
-//24小時制轉12小時制
+// converts from 24-hour notation to 12-hour notation
 #include<iostream>
 using namespace std;
 
