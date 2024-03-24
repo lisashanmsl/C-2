@@ -1,1 +1,1 @@
-# C-2
+# C++ homework2
