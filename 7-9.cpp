@@ -11,13 +11,12 @@ public:
 	ZipCode(int zipcode);			
 	ZipCode(string barcode);	
 	void set_zipcode(int zipcode) { this->zipcode = zipcode; }
-	void set_barcode(string barcode) { this->barcode = barcode; }
+	void set_barcode(string barcode) { barcodeTozip(barcode); }
 	int get_zipcode()const { return zipcode; }
-	string get_barcode()const { return barcode; }
+	string get_barcode() { return zipTobarcode(zipcode); }
 
 private:
 	int zipcode;
-	string barcode;
 	string zipTobarcode(int zipcode);		//轉換功能的函數放在private中
 	int barcodeTozip(string barcode);
 };
@@ -36,13 +35,11 @@ int main(void) {
 	system("pause");
 	return 0;
 }
-ZipCode::ZipCode() :zipcode(), barcode(){}		//defalt consturctor
+ZipCode::ZipCode() :zipcode(){}					//defalt consturctor
 ZipCode::ZipCode(int zipcode) {					//傳入整數zipcode
-	this->zipcode = zipcode;					//可同時初始化zipcode
-	this->barcode = zipTobarcode(zipcode);		//以及由zipcode轉換之後的barcode
+	this->zipcode = zipcode;					//初始化zipcode
 }
 ZipCode::ZipCode(string barcode) {
-	this->barcode = barcode;
 	this->zipcode = barcodeTozip(barcode);
 }
 string ZipCode::zipTobarcode(int zipcode) {		//從zipcode轉為barcode
