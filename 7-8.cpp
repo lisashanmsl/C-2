@@ -1,3 +1,4 @@
+//块Θ罿琖瓜
 #include<iostream>
 #include<cstdlib>
 #include<vector>
@@ -6,8 +7,8 @@ using namespace std;
 int find_max(vector<int> grades);
 
 int main(void) {
-	vector<int> grades;
-	vector<int> histogram;
+	vector<int> grades;				//魁块Θ罿
+	vector<int> histogram;			//魁Θ罿计秖
 	int stdgrade;
 	int maxgrade;
 
@@ -23,7 +24,7 @@ int main(void) {
 	maxgrade = find_max(grades);					
 	//琖瓜畒夹程程┮Τだ计盢histogram砞Θ罿程﹍て┮Τ计0ノresize()
 	histogram.resize(maxgrade + 1);					
-
+	
 
 	for (int i = 0; i < grades.size()-1; i++) {		//grades.size()-1ぃσ納程-1
 		histogram[grades[i]]++;						//参璸–だ计Τぶ(盢讽玡魁Θ罿计秖)
